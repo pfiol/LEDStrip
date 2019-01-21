@@ -5,8 +5,8 @@
 #include <ArduinoJson.h>
 
 // WIFI SETUP
-const char *ssid     = "TP-Link_3700";
-const char *password = "18964196";
+const char *ssid     = "";
+const char *password = "";
 
 int redPin = 13;
 int whitePin = 14;
@@ -34,7 +34,8 @@ struct mqtt_config {
   String status;  // Current status
 };
 
-mqtt_config mqtt = {"192.168.0.20", "Home/tvLEDS", "tvLEDS", "OFF"};
+// Enter your MQTT server IP address as the first argument 
+mqtt_config mqtt = {"", "Home/tvLEDS", "tvLEDS", "OFF"};
 
 
 WiFiClient net;
